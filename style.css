@@ -1,0 +1,107 @@
+* {
+    font-family: "DejaVu Sans Mono", "Liberation Mono", "FreeMono", "Noto Sans Mono CJK SC", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #1a1b26;
+    color: #a9b1d6;
+    border-bottom: 2px solid #24283b;
+}
+
+.modules-center {
+    margin: 0 20px;
+}
+
+/* CPU 总历史图表 - 110px (13字符: CPU: xxx% ████) */
+#custom-cpug {
+    background-color: #7aa2f7;
+    color: #1a1b26;
+    min-width: 110px;
+    padding: 0 4px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+/* 4核心历史图表 - 240px (27字符: 0:████ 1:████ 2:████ 3:████) */
+#custom-cores {
+    background-color: #2ac3de;
+    color: #1a1b26;
+    min-width: 240px;
+    padding: 0 4px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+/* CPU TOP3 + 温度 - 320px (60字符输出，12字符进程名) */
+#custom-topcpu {
+    background-color: #ff9e64;
+    color: #1a1b26;
+    min-width: 320px;
+    padding: 0 4px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+/* GPU - 110px (13字符: GPU: xxx% ████) */
+#custom-gpu {
+    background-color: #c0caf5;
+    color: #1a1b26;
+    min-width: 110px;
+    padding: 0 4px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+/* WiFi - 130px (16字符: 📶xxx% ↓xx↑xx) */
+#custom-wifi {
+    background-color: #e0af68;
+    color: #1a1b26;
+    min-width: 130px;
+    padding: 0 4px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+/* 系统负载 - 120px (14字符: LOAD x.xx x.xx) */
+#custom-load {
+    background-color: #73daca;
+    color: #1a1b26;
+    min-width: 120px;
+    padding: 0 4px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+/* 合并内存模块 - 400px (60字符输出，3进程+8字符进程名) */
+#custom-mem_combined {
+    background-color: #9ece6a;
+    color: #1a1b26;
+    min-width: 400px;
+    padding: 0 4px;
+    margin: 4px 2px;
+    border-radius: 4px;
+}
+
+/* 磁盘使用率 - 100px 紧凑布局 */
+#custom-disk {
+    background-color: #f7768e;
+    color: #1a1b26;
+    min-width: 100px;
+    padding: 0 2px;
+    margin: 4px 1px;
+    border-radius: 4px;
+}
+
+tooltip {
+    background-color: #1a1b26;
+    border: 1px solid #7aa2f7;
+    border-radius: 6px;
+}
+
+tooltip label {
+    color: #a9b1d6;
+    padding: 4px 8px;
+}

@@ -1,0 +1,71 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    
+    "modules-left": [],
+    "modules-center": ["custom/cpug", "custom/cores", "custom/topcpu", "custom/gpu", "custom/wifi", "custom/load", "custom/mem_combined", "custom/disk"],
+    "modules-right": [],
+    
+    "custom/cpug": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/cpu_graph.sh",
+        "interval": 1,
+        "tooltip": false
+    },
+    
+    "custom/cores": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/cores_graph.sh",
+        "interval": 1,
+        "tooltip": false
+    },
+    
+    "custom/topcpu": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/topcpu.sh",
+        "interval": 2,
+        "tooltip": true,
+        "tooltip-format": "CPU占用 TOP3"
+    },
+    
+    "custom/gpu": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/gpu.sh",
+        "interval": 2,
+        "tooltip": true,
+        "tooltip-format": "GPU 使用率"
+    },
+    
+    "custom/wifi": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/wifi_info.sh",
+        "interval": 2,
+        "tooltip": false
+    },
+    
+    "custom/mem_combined": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/mem_combined.sh",
+        "interval": 2,
+        "tooltip": true,
+        "tooltip-format": "内存使用详情"
+    },
+    
+    "custom/disk": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/disk.sh",
+        "interval": 10,
+        "tooltip": true,
+        "tooltip-format": "磁盘使用率"
+    },
+    
+    "custom/load": {
+        "format": "{}",
+        "exec": "$HOME/.config/waybar/scripts/load.sh",
+        "interval": 5,
+        "tooltip": true,
+        "tooltip-format": "系统平均负载\n1分钟: 最近1分钟的平均负载\n5分钟: 最近5分钟的平均负载\n15分钟: 最近15分钟的平均负载\n4核系统满载=4.0"
+    }
+}
