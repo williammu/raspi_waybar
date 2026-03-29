@@ -12,14 +12,16 @@
         "format": "{}",
         "exec": "$HOME/.config/waybar/scripts/cpu_graph.sh",
         "interval": 1,
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "CPU 总使用率\n图表: 最近4次采样历史"
     },
     
     "custom/cores": {
         "format": "{}",
         "exec": "$HOME/.config/waybar/scripts/cores_graph.sh",
         "interval": 1,
-        "tooltip": false
+        "tooltip": true,
+        "tooltip-format": "4核心 CPU 使用率\n每个核心显示最近4次采样历史"
     },
     
     "custom/topcpu": {
@@ -27,7 +29,7 @@
         "exec": "$HOME/.config/waybar/scripts/topcpu.sh",
         "interval": 2,
         "tooltip": true,
-        "tooltip-format": "CPU占用 TOP3"
+        "tooltip-format": "CPU 温度与 TOP3 进程\n显示当前CPU温度及占用最高的3个进程"
     },
     
     "custom/gpu": {
@@ -35,14 +37,15 @@
         "exec": "$HOME/.config/waybar/scripts/gpu.sh",
         "interval": 2,
         "tooltip": true,
-        "tooltip-format": "GPU 使用率"
+        "tooltip-format": "GPU 使用率\n基于 v3d gpu_stats 计算\n图表: 最近4次采样历史"
     },
     
     "custom/wifi": {
         "format": "{}",
         "exec": "$HOME/.config/waybar/scripts/wifi_info.sh",
-        "interval": 2,
-        "tooltip": false
+        "interval": 1,
+        "tooltip": true,
+        "tooltip-format": "WiFi 网络状态\n信号强度百分比\n↓下载速度 ↑上传速度 (KB/s)"
     },
     
     "custom/mem_combined": {
@@ -50,7 +53,7 @@
         "exec": "$HOME/.config/waybar/scripts/mem_combined.sh",
         "interval": 2,
         "tooltip": true,
-        "tooltip-format": "内存使用详情"
+        "tooltip-format": "内存使用情况\n已用/总共 内存容量\n占用百分比\nTOP3 内存消耗进程"
     },
     
     "custom/disk": {
@@ -58,7 +61,7 @@
         "exec": "$HOME/.config/waybar/scripts/disk.sh",
         "interval": 10,
         "tooltip": true,
-        "tooltip-format": "磁盘使用率"
+        "tooltip-format": "根分区 (/) 磁盘使用情况\n使用率百分比\n总容量大小"
     },
     
     "custom/load": {
@@ -66,6 +69,6 @@
         "exec": "$HOME/.config/waybar/scripts/load.sh",
         "interval": 5,
         "tooltip": true,
-        "tooltip-format": "系统平均负载\n1分钟: 最近1分钟的平均负载\n5分钟: 最近5分钟的平均负载\n15分钟: 最近15分钟的平均负载\n4核系统满载=4.0"
+        "tooltip-format": "系统平均负载 (1分钟)\n表示最近1分钟内运行队列中的平均进程数\n4核系统满载=4.0"
     }
 }
